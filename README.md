@@ -6,7 +6,7 @@ This GitHub repository contains the Python code and associated resources for my 
 
 ## Thesis Abstract
 
-<p align="center">
+<p style="text-align: justify;">
   This thesis deals with the development of a semi-analytical formulation for the non-linear
 vibration analysis of variable stiffness laminates. The formulation is established on the basis of
 the third-order shear deformation theory together with a mixed variational approach, where the
