@@ -22,11 +22,11 @@ brief example of design application.
 
 - **code/**: This directory contains the Python code used for conducting simulations, analysing data, and generating results for the thesis.
 
-- **data/**: Here, you can find any relevant data or datasets used in your research, if applicable.
+- **resources/**: Here, you can find any relevant data or datasets, if applicable, as well as other non-Python files.
 
-- **results/**: This directory holds the results and visualisations obtained from the simulations and analyses.
+- **results/**: This directory holds the results and visualisations obtained from some example simulations.
 
-- **documentation/**: You may include documentation or user guides for running your code or reproducing your research.
+- **documentation/**: Includes documentation or user guides to run the code and reproduce the results.
 
 ## How to Use
 
