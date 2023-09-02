@@ -7,17 +7,7 @@ This GitHub repository contains the Python code and associated resources for my 
 ## Thesis Abstract
 
 <p style="text-align: justify;">
-  This thesis deals with the development of a semi-analytical formulation for the non-linear
-vibration analysis of variable stiffness laminates. The formulation is established on the basis of
-the third-order shear deformation theory together with a mixed variational approach, where the
-Airy stress function is used to handle the membrane behaviour. The Ritz method is proposed to
-derive the discrete version of the time-dependent equations of motion and guarantee an effective
-solution procedure. A series of numerical methods for handling the time dependency are
-formulated: direct integration, differential quadrature, arc-length continuation and a reduced
-order harmonic balance. These four solution methods are compared in terms of accuracy and
-time for the analysis. Lastly, the efficiency of the proposed methods is exploited to conduct
-parametric analyses concerning non-linear vibrations of variable stiffness plates, as well as a
-brief example of design application.
+This thesis deals with the development of a semi-analytical formulation for the non-linear vibration analysis of variable stiffness laminates. The formulation is established on the basis of the third-order shear deformation theory together with a mixed variational approach, where the Airy stress function is used to handle the membrane behaviour. The Ritz method is proposed to derive the discrete version of the time-dependent equations of motion and guarantee an effective solution procedure. A series of numerical methods for handling the time dependency are formulated: direct integration, differential quadrature, arc-length continuation and a reduced order harmonic balance. These four solution methods are compared in terms of accuracy and time for the analysis. Lastly, the efficiency of the proposed methods is exploited to conduct parametric analyses concerning non-linear vibrations of variable stiffness plates, as well as a brief example of design application.
 </p>
 
 ## Repository Contents
