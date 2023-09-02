@@ -6,7 +6,8 @@ This GitHub repository contains the Python code and associated resources for my 
 
 ## Thesis Abstract
 
-This thesis deals with the development of a semi-analytical formulation for the non-linear
+<p align="center">
+  This thesis deals with the development of a semi-analytical formulation for the non-linear
 vibration analysis of variable stiffness laminates. The formulation is established on the basis of
 the third-order shear deformation theory together with a mixed variational approach, where the
 Airy stress function is used to handle the membrane behaviour. The Ritz method is proposed to
@@ -17,6 +18,7 @@ order harmonic balance. These four solution methods are compared in terms of acc
 time for the analysis. Lastly, the efficiency of the proposed methods is exploited to conduct
 parametric analyses concerning non-linear vibrations of variable stiffness plates, as well as a
 brief example of design application.
+</p>
 
 ## Repository Contents
 
