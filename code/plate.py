@@ -1,5 +1,7 @@
 # Plate definition
 
+import logging
+
 class Plate:
 
     class Geometry:
@@ -7,30 +9,29 @@ class Plate:
             self.a = a
             self.b = b
             self.h = h
+
+        def _set_geometry(self):
             try:
-                self.r = a / b
+                self.r = self.a / self.b
             except ZeroDivisionError:
-                print("Error: division by zero is not allowed, b set equal to 1.0")
-                self.r = a
+                print("Error: division by zero is not allowed, 'b' set equal to 1.0")
+                self.r = self.a
 
     class BoundaryConditions:
         def __init__(self, out_of_plane: str, in_plane: str):
-            try:
-                if isinstance(out_of_plane, str):
-                    self.out_of_plane = out_of_plane
-                else:
-                    raise TypeError("Attribute 'out_of_plane' must be a string.")
+            self.out_of_plane = out_of_plane
+            self.in_plane = in_plane
 
-                if isinstance(in_plane, str):
-                    self.in_plane = in_plane
-                else:
-                    raise TypeError("Attribute 'in_plane' must be a string.")
-            except TypeError:
-                print("Error: boundary conditions must be defined as strings, \
-                set default boundary conditions 'SSSS' & 'immovable'.")
-                self.out_of_plane = 'SSSS'
-                self.in_plane = 'immovable'
+        def _set_boundary_conditions(self, out_of_plane_values, in_plane_values):
+            if (all(side_bc in out_of_plane_values for side_bc in self.out_of_plane) and len(self.out_of_plane) == 4) and \
+               (self.in_plane.lower() in in_plane_values):
+                return self.out_of_plane, self.in_plane.lower()
+            else:
+                self.out_of_plane = "CCCC"
+                self.in_plane = "immovable"
+                logging.error("Incorrect boundary conditions; set default 'CCCC' and 'immovable'.")
+                return self.out_of_plane, self.in_plane
     
-    def __init__(self, a, b, h, out_of_plane, in_plane):
-        self.Geometry = self.Geometry(a, b, h)
-        self.BoundaryConditions = self.BoundaryConditions(out_of_plane, in_plane)
+    def __init__(self):
+        self.Geometry = None
+        self.BoundaryConditions = None

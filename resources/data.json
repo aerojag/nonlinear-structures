@@ -1,0 +1,11 @@
+{
+    "Boundary conditions": {
+        "Out-of-plane": ["F", "S", "C"],
+        "In-plane": ["Completely free", "Movable", "Immovable"]
+    },
+    "Out-of-plane boundary condition indexes": {
+        "F": [0, 0],
+        "S": [1, 0],
+        "C": [1, 1]
+    }
+}
