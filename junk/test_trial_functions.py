@@ -1,6 +1,9 @@
+import sys
 import matplotlib.pyplot as plt
 
-from plate import Plate
+sys.path.append("/hpc/ac48390/git/nonlinear_vibrations/code")
+from plate import *
+from trial_functions import *
 
 # Handle boundary conditions
 """
