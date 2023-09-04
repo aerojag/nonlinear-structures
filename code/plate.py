@@ -29,7 +29,7 @@ class Plate:
             else:
                 self.out_of_plane = "CCCC"
                 self.in_plane = "immovable"
-                logging.error("Incorrect boundary conditions; set default 'CCCC' and 'immovable'.")
+                logging.error("Incorrect boundary conditions, default ones are set: 'CCCC' and 'immovable'.")
                 return self.out_of_plane, self.in_plane
     
     def __init__(self):
