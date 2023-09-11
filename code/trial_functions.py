@@ -1,5 +1,3 @@
-# Trial functions for Ritz method based on Legendre polynomials
-
 import numpy as np
 
 class Legendre():
@@ -187,5 +185,4 @@ class TrialFunctions(Legendre):
             None
         else:
             raise ValueError("In-plane boundary conditions should be either 'immovable', 'movable' or 'completely free'.")
-        
-        
+  
