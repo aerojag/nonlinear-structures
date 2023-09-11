@@ -1,7 +1,7 @@
 import sys
 import matplotlib.pyplot as plt
 
-sys.path.append("/hpc/ac48390/git/nonlinear_vibrations/code")
+sys.path.append("/mnt/c/Users/JORGE/Desktop/Coding/git/nonlinear_vibrations/code")
 from plate import *
 from trial_functions import *
 
@@ -53,7 +53,7 @@ plt.rcParams["font.size"] = 25.0
 for i in range(N + 1):
     trial = TrialFunctions(x_values, i)
     legendre_0 = trial.compute_legendre().P[i]
-    trial_x = trial.get_x(i1, j1)
+    trial_x = trial.get_dx(i1, j1)
     trial_nu = trial.get_nu(bc_ip)
     # print(legendre_0)
     # plt.plot(x_values, legendre_0, label=fr'$P_{i}$', linewidth=3.0)

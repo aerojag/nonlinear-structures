@@ -20,8 +20,7 @@ class Legendre():
 
     def _get_legendre(self, n: int):
         """
-        Compute Legendre polynomials and their first and second derivatives
-        using Bonnet's recursion formula.
+        Compute Legendre polynomials and their first and second derivatives using Bonnet's recursion formula.
         
         Args:
             n (int): Order of Legendre polynomial.
@@ -38,7 +37,7 @@ class Legendre():
 
     def compute_legendre(self):
         """
-        Update Legendre polynomials' order and their derivatives.
+        Update order of Legendre polynomials and their derivatives.
         """
         for order in range(self.max_order):
             self._get_legendre(order)
@@ -82,9 +81,9 @@ class TrialFunctions(Legendre):
         Returns:
             str: The generated docstring.
         """
-        if function_type is 'displacements' or 'section rotations':
-            return self.TRIAL_FUNCTION_BASE_DOCSTRING.format(function_type=function_type)
-        elif function_type == 'Airy':
+        if function_type in ('displacements', 'section rotations'):
+            return self.TRIAL_FUNCTION_BASE_DOCSTRING.format(function_type)
+        elif function_type is 'Airy':
             return self.AIRY_FUNCTION_BASE_DOCSTRING
         else:
             raise ValueError('Error: incorrect function type.')
@@ -111,8 +110,7 @@ class TrialFunctions(Legendre):
         {docstring}
         """.format(docstring=self._generate_docstring('displacements'))
         if i_index and j_index:
-            return - 2 * self.P[self.max_order] - 4 * self.x * self.dP[self.max_order] + \
-                    (1 - self.x) * (1 + self.x) * self.d2P[self.max_order]
+            return - 2 * self.P[self.max_order] - 4 * self.x * self.dP[self.max_order] + (1 - self.x) * (1 + self.x) * self.d2P[self.max_order]
         elif i_index:
             return - 2 * self.dP[self.max_order] + (1 - self.x) * self.d2P[self.max_order]
         elif j_index:
@@ -154,16 +152,13 @@ class TrialFunctions(Legendre):
         """
         {docstring}
         """.format(docstring=self._generate_docstring('Airy'))
-        return - 4 * self.x * (1 - self.x ** 2) * self.P[self.max_order] + \
-                (1 - self.x ** 2) ** 2 * self.dP[self.max_order]
+        return - 4 * self.x * (1 - self.x ** 2) * self.P[self.max_order] + (1 - self.x ** 2) ** 2 * self.dP[self.max_order]
         
     def get_d2airy(self):
         """
         {docstring}
         """.format(docstring=self._generate_docstring('Airy'))
-        return   4 * (3 * self.x ** 2 - 1) * self.P[self.max_order] \
-               - 8 * self.x * (1 - self.x ** 2) * self.dP[self.max_order] + \
-                (1 - self.x ** 2) ** 2 * self.d2P[self.max_order]
+        return   4 * (3 * self.x ** 2 - 1) * self.P[self.max_order] - 8 * self.x * (1 - self.x ** 2) * self.dP[self.max_order] + (1 - self.x ** 2) ** 2 * self.d2P[self.max_order]
     
     def get_nu(self, bc_in_plane):
         """
