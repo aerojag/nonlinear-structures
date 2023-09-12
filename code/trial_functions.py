@@ -1,5 +1,6 @@
 import numpy as np
 
+
 class Legendre():
     """
     A class for computing Legendre polynomials.
@@ -44,6 +45,7 @@ class Legendre():
         
         return self
     
+
 class TrialFunctions(Legendre):
     """
     A class for computing trial functions based on Legendre polynomials.
@@ -180,4 +182,4 @@ class TrialFunctions(Legendre):
             None
         else:
             raise ValueError("In-plane boundary conditions should be either 'immovable', 'movable' or 'completely free'.")
-  
+

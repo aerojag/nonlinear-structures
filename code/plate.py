@@ -1,8 +1,8 @@
-# Plate definition
-
 import logging
 
+
 class Plate:
+
 
     class Geometry:
         def __init__(self, a: float, b: float, h: float):
@@ -16,6 +16,7 @@ class Plate:
             except ZeroDivisionError:
                 print("Error: division by zero is not allowed, 'b' set equal to 1.0")
                 self.r = self.a
+
 
     class BoundaryConditions:
         def __init__(self, out_of_plane: str, in_plane: str):
@@ -35,3 +36,4 @@ class Plate:
     def __init__(self):
         self.Geometry = None
         self.BoundaryConditions = None
+
